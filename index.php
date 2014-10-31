@@ -30,7 +30,8 @@
 </form>
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="pure-table pure-table-horizontal">
-  <tr class="pure-table-odd">
+  <thead>
+  <tr>
     <th>日數</th>
     <th>1</th>
     <th>2</th>
@@ -64,6 +65,8 @@
     <th>30</th>
     <th>31</th>
   </tr>
+  </thead>
+  <tbody>
 <?php
 	if($_GET['alldays']>0)
 		$allDays = $_GET['alldays'];
@@ -113,10 +116,12 @@
 		}
 	}
 ?>
+</tbady>
 </table>
 <br><br>
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="pure-table pure-table-horizontal">
-  <tr class="pure-table-odd">
+  <thead>
+  <tr>
     <th>小時</th>
     <th>1</th>
     <th>2</th>
@@ -150,6 +155,8 @@
     <th>30</th>
     <th>31</th>
   </tr>
+  </thead>
+  <tbody>
 <?php
 	for($dayIndex=1,$i=1;$i<=372;$i++){
 		if(in_array($i, $monthFirstDayArray)) {
@@ -178,6 +185,7 @@
 		}
 	}
 ?> 
+</tbady>
 </table>
 </body>
 </html>
